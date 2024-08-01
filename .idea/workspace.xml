@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a780c61-7639-4cff-a31b-c0e1a3d2ca38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MinCurve_PredefinedTracks.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CubicInterpolation" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CubicInterpolation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MinCurveQuadProg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MinimumCurvatureSimple.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2g7fc54vUMrjzdTp7rPsV0I1zNx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Basics.executor": "Run",
+    "Python.CubicInterpolation.executor": "Run",
+    "Python.Iterative.executor": "Run",
+    "Python.KindaCurvy.executor": "Run",
+    "Python.MinCUVE_GENETIC_BEST.executor": "Run",
+    "Python.MinCUrvePlotly.executor": "Run",
+    "Python.MinCurveCoordinate.executor": "Run",
+    "Python.MinCurveGenetic.executor": "Run",
+    "Python.MinCurveQUADPROG_BEST.executor": "Run",
+    "Python.MinCurveQuadProg.executor": "Run",
+    "Python.MinCurveSmoothGenetic.executor": "Run",
+    "Python.MinCurveSmoothGenetic_Best.executor": "Run",
+    "Python.MinQuadProgWorking.executor": "Run",
+    "Python.MinimumCurvatureSimple.executor": "Run",
+    "Python.SimilarToCentre.executor": "Run",
+    "Python.Trial, Quadratic Programming.executor": "Run",
+    "Python.Trial.executor": "Run",
+    "Python.please.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test2.executor": "Run",
+    "Python.test3.executor": "Run",
+    "Python.test4_smoothornot.executor": "Run",
+    "Python.test5.executor": "Run",
+    "Python.test6.executor": "Run",
+    "Python.test7.executor": "Run",
+    "Python.trial.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/sivas/PycharmProjects/MinCurve_PredefinedTracks/Austin.csv",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a780c61-7639-4cff-a31b-c0e1a3d2ca38" name="Changes" comment="" />
+      <created>1715053612187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715053612187</updated>
+      <workItem from="1715053615156" duration="2553000" />
+      <workItem from="1715132159576" duration="1178000" />
+      <workItem from="1715153935989" duration="7812000" />
+      <workItem from="1715390184434" duration="13321000" />
+      <workItem from="1715677467756" duration="598000" />
+      <workItem from="1715757885443" duration="11951000" />
+      <workItem from="1715821473105" duration="3472000" />
+      <workItem from="1715839265575" duration="9394000" />
+      <workItem from="1715898280282" duration="1994000" />
+      <workItem from="1715900382338" duration="831000" />
+      <workItem from="1715903331984" duration="742000" />
+      <workItem from="1715912395543" duration="4030000" />
+      <workItem from="1715934585908" duration="4554000" />
+      <workItem from="1715939739236" duration="2382000" />
+      <workItem from="1716347886011" duration="8209000" />
+      <workItem from="1716449027815" duration="4506000" />
+      <workItem from="1717380556162" duration="8236000" />
+      <workItem from="1717474331144" duration="4165000" />
+      <workItem from="1717998797441" duration="2246000" />
+      <workItem from="1719958358230" duration="76658000" />
+      <workItem from="1721007466000" duration="4158000" />
+      <workItem from="1721191646494" duration="2023000" />
+      <workItem from="1721969243723" duration="8921000" />
+      <workItem from="1722401699800" duration="1262000" />
+      <workItem from="1722405120249" duration="9176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveSmoothGenetic_Best.coverage" NAME="MinCurveSmoothGenetic_Best Coverage Results" MODIFIED="1722402300573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test6.coverage" NAME="test6 Coverage Results" MODIFIED="1720485980113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$Trial__Quadratic_Programming.coverage" NAME="Trial, Quadratic Programming Coverage Results" MODIFIED="1717998918121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveCoordinate.coverage" NAME="MinCurveCoordinate Coverage Results" MODIFIED="1715767834107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinQuadProgWorking.coverage" NAME="MinQuadProgWorking Coverage Results" MODIFIED="1720505821489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$Basics.coverage" NAME="Basics Coverage Results" MODIFIED="1722488374817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCUrvePlotly.coverage" NAME="MinCUrvePlotly Coverage Results" MODIFIED="1715853921846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCUVE_GENETIC_BEST.coverage" NAME="MinCUVE_GENETIC_BEST Coverage Results" MODIFIED="1720402277500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinimumCurvatureSimple.coverage" NAME="MinimumCurvatureSimple Coverage Results" MODIFIED="1717481720298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$SimilarToCentre.coverage" NAME="SimilarToCentre Coverage Results" MODIFIED="1715934927466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$CubicInterpolation.coverage" NAME="CubicInterpolation Coverage Results" MODIFIED="1722493708942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test.coverage" NAME="test Coverage Results" MODIFIED="1719980785393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1720483257391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test4_smoothornot.coverage" NAME="test4_smoothornot Coverage Results" MODIFIED="1720483289568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$trial.coverage" NAME="trial Coverage Results" MODIFIED="1715942070642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveQUADPROG_BEST.coverage" NAME="MinCurveQUADPROG_BEST Coverage Results" MODIFIED="1720584024963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test5.coverage" NAME="test5 Coverage Results" MODIFIED="1720590738953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveSmoothGenetic.coverage" NAME="MinCurveSmoothGenetic Coverage Results" MODIFIED="1715940742915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveGenetic.coverage" NAME="MinCurveGenetic Coverage Results" MODIFIED="1715940415360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$Iterative.coverage" NAME="Iterative Coverage Results" MODIFIED="1715935375899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$please.coverage" NAME="please Coverage Results" MODIFIED="1722490892913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1720401793995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$MinCurveQuadProg.coverage" NAME="MinCurveQuadProg Coverage Results" MODIFIED="1720393035304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$KindaCurvy.coverage" NAME="KindaCurvy Coverage Results" MODIFIED="1720403639473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$test7.coverage" NAME="test7 Coverage Results" MODIFIED="1720500333839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MinCurve_PredefinedTracks$Trial.coverage" NAME="Trial Coverage Results" MODIFIED="1715916086174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

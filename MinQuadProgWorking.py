@@ -1,0 +1,191 @@
+import numpy as np
+import plotly.graph_objects as go
+import csv
+import os
+import scipy.special
+import time
+
+try:
+    import cvxpy as cp
+except ImportError:
+    print("Please install cvxpy: pip install cvxpy")
+    exit(1)
+
+# Read data from CSV file
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'MexicoCity.csv')
+try:
+    with open(file_path, 'r') as f:
+        reader = csv.reader(f)
+        headers = next(reader)
+        column = {h: [] for h in headers}
+        for row in reader:
+            for h, v in zip(headers, row):
+                column[h].append(float(v))
+except FileNotFoundError:
+    print(f"File not found: {file_path}")
+    exit(1)
+
+# Extract data from CSV columns
+x_coord_cp = column['x_m']
+y_coord_cp = column['y_m']
+track_width_right = column['w_tr_right_m']
+track_width_left = column['w_tr_left_m']
+
+def calculate_curvature(x, y):
+    dx_dt = np.gradient(x)
+    dy_dt = np.gradient(y)
+    d2x_dt2 = np.gradient(dx_dt)
+    d2y_dt2 = np.gradient(dy_dt)
+    epsilon = 1e-6  # Increased epsilon for better numerical stability
+    curvature = np.abs(dx_dt * d2y_dt2 - d2x_dt2 * dy_dt) / (dx_dt**2 + dy_dt**2 + epsilon)**1.5
+    curvature = np.where(np.isnan(curvature), np.inf, curvature)  # Replace NaN with infinity for debugging
+    return curvature
+
+def calculate_total_curvature(x, y):
+    curvature = calculate_curvature(x, y)
+    return np.sum(curvature) * np.mean(np.sqrt(np.diff(x)**2 + np.diff(y)**2))
+
+def quadratic_programming_optimization(x, y, num_points, track_width_left, track_width_right):
+    y = np.array(y)
+    track_width_left = np.array(track_width_left)
+    track_width_right = np.array(track_width_right)
+
+    y_var = cp.Variable(num_points)
+
+    # Ensure the track is a closed loop
+    d2y_dt2 = y_var[2:] - 2 * y_var[1:-1] + y_var[:-2]
+    curvature = cp.abs(y_var[2:] - 2 * y_var[1:-1] + y_var[:-2])
+    objective = cp.Minimize(cp.sum(curvature))
+
+    constraints = [y_var[i] >= y[i] - track_width_left[i] for i in range(num_points)]
+    constraints += [y_var[i] <= y[i] + track_width_right[i] for i in range(num_points)]
+
+    problem = cp.Problem(objective, constraints)
+
+    start_time = time.time()
+    problem.solve()
+    end_time = time.time()
+
+    y_opt = y_var.value
+
+    return x, y_opt, end_time - start_time  # Return execution time
+
+def calculate_boundary_points(x_centerline, y_centerline, track_width, negate=False):
+    if negate:
+        track_width = np.array(track_width) * -1
+
+    dx = np.gradient(x_centerline)
+    dy = np.gradient(y_centerline)
+    norm = np.sqrt(dx ** 2 + dy ** 2)
+    norm = np.where(norm == 0, np.finfo(float).eps, norm)
+    normal_dx = -dy / norm
+    normal_dy = dx / norm
+
+    x_boundary = np.array(x_centerline) + np.array(track_width) * normal_dx
+    y_boundary = np.array(y_centerline) + np.array(track_width) * normal_dy
+
+    x_boundary = np.append(x_boundary, x_boundary[0])
+    y_boundary = np.append(y_boundary, y_boundary[0])
+
+    return x_boundary, y_boundary
+
+def smooth_track_with_bezier(track, num_points=100):
+    smooth_track = []
+    num_control_points = len(track)
+    i = 0
+    while i < num_control_points:
+        p0 = track[i]
+        p1 = track[min(i + 1, num_control_points - 1)]
+        p2 = track[min(i + 2, num_control_points - 1)]
+
+        control_points = [p0, p1, p2]
+        bezier_points = bezier_curve(control_points, num_points)
+
+        if i + 2 < num_control_points:
+            smooth_track.extend(bezier_points[:-1])
+        else:
+            smooth_track.extend(bezier_points[:-1])  # Exclude last point to avoid duplicate
+
+        i += 2
+
+    # Ensure the track loops back to the start
+    smooth_track.append(smooth_track[0])
+
+    return smooth_track
+
+def bezier_curve(control_points, num_points=100):
+    n = len(control_points) - 1
+    t = np.linspace(0, 1, num_points)
+    curve = np.zeros((num_points, 2))
+    for i in range(n + 1):
+        curve += np.outer((scipy.special.comb(n, i) * (t ** i) * ((1 - t) ** (n - i))), control_points[i])
+    return curve
+
+def smooth_transition(start_point, end_point, num_points=50):
+    t = np.linspace(0, 1, num_points)
+    x_smooth = start_point[0] * (1 - t) + end_point[0] * t
+    y_smooth = start_point[1] * (1 - t) + end_point[1] * t
+    return list(zip(x_smooth, y_smooth))
+
+def calculate_track_length(x, y):
+    return np.sum(np.sqrt(np.diff(x)**2 + np.diff(y)**2))
+
+def calculate_global_curvature(x, y):
+    curvature = calculate_curvature(x, y)
+    track_length = calculate_track_length(x, y)
+    return np.sum(np.abs(curvature)), len(curvature), track_length
+
+def main():
+    num_points = len(x_coord_cp)
+
+    optimized_x, optimized_y, optimization_time = quadratic_programming_optimization(x_coord_cp, y_coord_cp, num_points, track_width_left, track_width_right)
+
+    smooth_optimized_track = smooth_track_with_bezier(list(zip(optimized_x, optimized_y)), num_points=200)
+    smooth_centerline = smooth_track_with_bezier(list(zip(x_coord_cp, y_coord_cp)), num_points=200)
+
+    # Improved smoothing for start and end points
+    smooth_optimized_track[-1] = smooth_optimized_track[0]  # Ensure the last point equals the first
+    smooth_transition_points = smooth_transition(smooth_optimized_track[-2], smooth_optimized_track[0])
+    smooth_optimized_track[-num_points//2:] = smooth_transition_points
+
+    fig = go.Figure()
+
+    x_left_boundary, y_left_boundary = calculate_boundary_points(x_coord_cp, y_coord_cp, track_width_left)
+    x_right_boundary, y_right_boundary = calculate_boundary_points(x_coord_cp, y_coord_cp, track_width_right, negate=True)
+
+    fig.add_trace(go.Scatter(x=x_left_boundary, y=y_left_boundary, mode='lines', name='Left Boundary', line=dict(color='black')))
+    fig.add_trace(go.Scatter(x=x_right_boundary[::-1], y=y_right_boundary[::-1], mode='lines', name='Right Boundary', line=dict(color='black')))
+
+    x_smooth_opt, y_smooth_opt = zip(*smooth_optimized_track)
+    fig.add_trace(go.Scatter(x=x_smooth_opt, y=y_smooth_opt, mode='lines', name='Smooth Optimized Track'))
+
+    x_smooth_centerline, y_smooth_centerline = zip(*smooth_centerline)
+    fig.add_trace(go.Scatter(x=x_smooth_centerline, y=y_smooth_centerline, mode='lines', name='Smooth Centerline'))
+
+    fig.update_layout(
+        yaxis=dict(
+            scaleanchor="x",
+            scaleratio=1
+        )
+    )
+
+    fig.show()
+
+    global_curvature_smooth_opt, points_smooth_opt, length_smooth_opt = calculate_global_curvature(x_smooth_opt, y_smooth_opt)
+    print(f"Smooth optimized track:")
+    print(f"Global curvature: {global_curvature_smooth_opt:.4f} m^-1")
+    print(f"Number of points: {points_smooth_opt}")
+    print(f"Track length: {length_smooth_opt:.2f} m")
+    print(f"Optimization time: {optimization_time:.4f} seconds")
+    print()
+
+    global_curvature_smooth_centerline, points_smooth_centerline, length_smooth_centerline = calculate_global_curvature(x_smooth_centerline, y_smooth_centerline)
+    print(f"Smooth centerline:")
+    print(f"Global curvature: {global_curvature_smooth_centerline:.4f} m^-1")
+    print(f"Number of points: {points_smooth_centerline}")
+    print(f"Track length: {length_smooth_centerline:.2f} m")
+    print()
+
+if __name__ == "__main__":
+    main()
